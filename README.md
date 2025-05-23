@@ -1,15 +1,9 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
+## Preparation
+Install package
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+npm install
 ```
 
 ## How to use
@@ -17,7 +11,7 @@ Run hardhat node
 ```shell
 npx hardhat node
 ```
-Deploy smart contract to localhost network
+Deploy smart contract to localhost network (**use different terminal*)
 ```shell
 npx hardhat run scrtips/deploy.js --network localhost
 ```
