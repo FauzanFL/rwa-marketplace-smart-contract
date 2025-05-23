@@ -81,9 +81,11 @@ contract RealAssetNFT is ERC721, Ownable {
     }
 
     /// @notice Update harga dan status jual
-    function updateListing(uint256 tokenId, uint256 newPrice, bool forSale) external {
+    function updateListing(uint256 tokenId, string memory newName, string memory newDescription, uint256 newPrice, bool forSale) external {
         require(ownerOf(tokenId) == msg.sender, "Not the owner");
         assets[tokenId].price = newPrice;
+        assets[tokenId].name = newName;
+        assets[tokenId].description = newDescription;
         assets[tokenId].forSale = forSale;
         assets[tokenId].seller = payable(msg.sender);
     }
